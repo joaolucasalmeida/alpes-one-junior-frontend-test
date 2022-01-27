@@ -63,4 +63,9 @@ export default {
   .titulo-form-container {
     display: flex;
   }
+  @media screen and (max-width: 600px) {
+    .form-container {
+      display: none;
+    }
+  }
 </style>

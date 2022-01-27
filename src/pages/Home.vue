@@ -51,4 +51,19 @@ export default {
     margin-left: 285px;
 }
 
+/* On screens that are 600px wide or less, make the cards stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .cards-container {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
+  .titulo-lista-carros {
+    margin-left: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
 </style>

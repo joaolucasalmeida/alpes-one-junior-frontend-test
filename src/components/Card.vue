@@ -61,4 +61,9 @@ export default {
         filter: invert(42%) sepia(0%) saturate(531%) hue-rotate(245deg) brightness(88%) contrast(75%);
         cursor: pointer;
     }
+    @media screen and (max-width: 600px) {
+      .card-container {
+        margin-right: 0px;
+      }
+    }
 </style>
