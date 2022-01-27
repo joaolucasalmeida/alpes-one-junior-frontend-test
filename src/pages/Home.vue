@@ -1,5 +1,6 @@
 <template>
   <div class="home-container">
+    <Header />
     <Form />
     <Banner />
     <h1 class="titulo-lista-carros">ESCOLHA SEU BMW</h1>
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import Header from "../components/Header.vue";
 import Card from "../components/Card.vue";
 import Banner from "../components/Banner.vue";
 import Form from "../components/Form.vue";
@@ -26,6 +28,7 @@ import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
   components: {
+    Header,
     Banner,
     Card,
     Form,

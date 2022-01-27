@@ -1,13 +1,12 @@
 <template>
-    <button class="botao-estilo-padrao" :style="{ width: width}"> {{ textoBotao }} </button>
+    <button class="botao-estilo-padrao"> {{ textoBotao }} </button>
 </template>
 
 <script>
 export default {
-  name: 'Button',
+  name: 'MenuButton',
   props: {
     textoBotao: String,
-    width: String
   }
 }
 </script>
@@ -15,13 +14,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .botao-estilo-padrao {
-        background-color: #1c69d4;
-        width: 275px;
-        height: 45px;
-        color: white;
+        background-color: white;
+        width: fit-content;
+        height: fit-content;
+        color: #666666;
         border: none;
         cursor: pointer;
         font-family: BMWTypeNext-Bold;
         font-size: 14px;
+        margin-right: 58px;
     }
 </style>

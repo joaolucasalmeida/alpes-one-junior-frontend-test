@@ -12,6 +12,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .banner-imagem {
+    width: 1920px;
     min-width: 1400px;
   }
   .banner-imagem-mobile {

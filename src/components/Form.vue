@@ -14,7 +14,7 @@
     <Input labelInput="Modelo" />
     <Input labelInput="Mensagem" />
     <Checkbox />
-    <Button width="215" textoBotao="Enviar" />
+    <Button width="215px" textoBotao="Enviar" />
   </div>
 </template>
 <script>
