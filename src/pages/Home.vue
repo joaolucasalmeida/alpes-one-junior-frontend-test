@@ -13,6 +13,7 @@
         <Card marcaDoCarro="BMW Z4" imagemDoCarro="imgs\veiculos\z4.png" />
         <Card marcaDoCarro="BMW Serie 2" imagemDoCarro="imgs\veiculos\serie2.png" />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -20,13 +21,15 @@
 import Card from "../components/Card.vue";
 import Banner from "../components/Banner.vue";
 import Form from "../components/Form.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-  name: "App",
+  name: "Home",
   components: {
     Banner,
     Card,
     Form,
+    Footer
   },
 };
 </script>
