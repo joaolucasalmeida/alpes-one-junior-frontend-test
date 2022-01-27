@@ -27,11 +27,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
     .card-container {
         width: 315px;
         height: 363px;
         text-align: center;
+        margin-right: 30px;
+        margin-bottom: 30px;
     }
     .marcaDoCarro {
         margin-top: 16px;
@@ -56,6 +58,7 @@ export default {
         width: 24px;
         height: 24px;
         margin-left: 16px;
-        color: #666666;
+        filter: invert(42%) sepia(0%) saturate(531%) hue-rotate(245deg) brightness(88%) contrast(75%);
+        cursor: pointer;
     }
 </style>

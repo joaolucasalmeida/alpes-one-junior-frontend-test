@@ -1,20 +1,14 @@
 <template>
-  <Form />
-  <Banner />
-  <Card marcaDoCarro="BMW Serie 1" imagemDoCarro="imgs\veiculos\serie1.png"/>
+  <Home />
 </template>
 
 <script>
-import Card from './components/Card.vue'
-import Banner from './components/Banner.vue'
-import Form from './components/Form.vue'
+import Home from './pages/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    Banner,
-    Card, 
-    Form
+    Home,
   }
 }
 </script>

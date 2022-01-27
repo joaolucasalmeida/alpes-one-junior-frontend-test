@@ -13,7 +13,6 @@ export default {
   props: {
     labelInput: String,
   },
-
 };
 </script>
 
@@ -43,7 +42,7 @@ export default {
   position: absolute;
   top: 20px;
   left: 12px;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
   transform-origin: 0 0;
@@ -70,7 +69,7 @@ export default {
   font-family: inherit;
   padding: 16px 12px 0 12px;
   height: 56px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
   color: #000;
