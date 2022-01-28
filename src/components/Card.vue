@@ -1,9 +1,14 @@
 <template>
   <div class="card-container">
-    <img :src="imagemDoCarro" alt="Imagem do carro">
+    <img class="imagem-do-carro" :src="imagemDoCarro" alt="Imagem do carro">
     <div class="marcaDoCarro">{{ marcaDoCarro }}</div>
-    <div v-if="!esconderBotaoCotacao">
-      <Button textoBotao="Cotação"/>
+    <div class="container-button-card">
+      <div v-if="!esconderBotaoCotacao" class="margin-right">
+        <Button textoBotao="Cotação"/>
+      </div>
+      <div class="exibir-botao-ligar">
+        <Button textoBotao="Ligar" color="#666666"/>
+      </div>
     </div>
     <div class="compartilhe-container">
         <span class="compartilhe-texto">Compartilhe: </span> 
@@ -23,7 +28,7 @@ export default {
   props: {
     imagemDoCarro: String,
     marcaDoCarro: String,
-    esconderBotaoCotacao: Boolean
+    esconderBotaoCotacao: Boolean,
   },
 
 }
@@ -42,7 +47,6 @@ export default {
         margin-top: 16px;
         margin-bottom: 29px;
         text-align: left;
-        margin-left: 20px;
         font-family: BMWTypeNext-Light;
         font-size: 20px;
     }
@@ -53,7 +57,7 @@ export default {
     .compartilhe-container {
         display: flex;
         height: 24px;
-        margin-left: 20px;
+        margin-left: 2px;
         margin-top: 30px;
         align-items: center;
     }
@@ -64,9 +68,27 @@ export default {
         filter: invert(42%) sepia(0%) saturate(531%) hue-rotate(245deg) brightness(88%) contrast(75%);
         cursor: pointer;
     }
+    .compartilhe-icones:hover {
+      filter: invert(45%) sepia(90%) saturate(4924%) hue-rotate(204deg) brightness(88%) contrast(89%);
+    }
+    .container-button-card {
+      display: flex;
+    }
+    .exibir-botao-ligar {
+      display: none;
+    }
+    .imagem-do-carro:hover {
+      opacity: 0.5;
+    }
+    .margin-right {
+      margin-right: 16px;
+    }
     @media screen and (max-width: 600px) {
       .card-container {
         margin-right: 0px;
+      }
+      .exibir-botao-ligar {
+        display: flex;
       }
     }
 </style>

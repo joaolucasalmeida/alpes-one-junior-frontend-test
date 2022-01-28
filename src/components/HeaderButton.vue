@@ -36,6 +36,9 @@ export default {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.botao-estilo-padrao:hover {
+  filter: brightness(90%);
+}
 .icone-botao {
     width: 19px;
     height: 19px;

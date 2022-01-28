@@ -60,25 +60,35 @@
       <Form />
     </div>
     <div v-if="showDropdown" class="dropdown-container">
-      <Card
-        marcaDoCarro="BMW Serie 1"
-        imagemDoCarro="imgs\veiculos\serie1.png"
-        esconderBotaoCotacao="true"
+      <img
+        class="dropdown-setas"
+        src="icons/svg/seta-a-esquerda.svg"
+        alt="icone"
       />
       <Card
         marcaDoCarro="BMW Serie 1"
         imagemDoCarro="imgs\veiculos\serie1.png"
-        esconderBotaoCotacao="true"
+        :esconderBotaoCotacao="true"
       />
       <Card
         marcaDoCarro="BMW Serie 1"
         imagemDoCarro="imgs\veiculos\serie1.png"
-        esconderBotaoCotacao="true"
+        :esconderBotaoCotacao="true"
       />
       <Card
         marcaDoCarro="BMW Serie 1"
         imagemDoCarro="imgs\veiculos\serie1.png"
-        esconderBotaoCotacao="true"
+        :esconderBotaoCotacao="true"
+      />
+      <Card
+        marcaDoCarro="BMW Serie 1"
+        imagemDoCarro="imgs\veiculos\serie1.png"
+        :esconderBotaoCotacao="true"
+      />
+      <img
+        class="dropdown-setas"
+        src="icons/svg/seta-a-direita.svg"
+        alt="icone"
       />
     </div>
   </header>
@@ -114,7 +124,6 @@ export default {
 
     //Exibe dropdown do menu apos click no botao do menu
     clickMenu() {
-      console.log("aaaa");
       this.showDropdown = !this.showDropdown;
     },
   },
@@ -150,6 +159,16 @@ export default {
   justify-content: center;
   border-style: outset;
   border-width: 1px;
+}
+.dropdown-setas {
+  width: 24px;
+  height: 24px;
+  filter: invert(39%) sepia(15%) saturate(16%) hue-rotate(64deg) brightness(95%)
+    contrast(81%);
+  margin-top: 158px;
+  margin-right: 35px;
+  margin-left: 35px;
+  cursor: pointer;
 }
 .mobile-header-button {
   display: none;

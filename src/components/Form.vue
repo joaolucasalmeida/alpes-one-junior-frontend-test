@@ -67,6 +67,7 @@ export default {
     .form-container {
       margin: 0;
       width: 100%;
+      min-width: 380px;
     }
   }
 </style>
