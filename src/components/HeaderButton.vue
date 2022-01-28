@@ -4,8 +4,8 @@
     :style="{ backgroundColor: color, width: width + 'px' }"
   >
     <div class="container-conteudo-botao">
-        <img class="icone-botao" :src="icone" alt="icone" />
-        {{ textoBotao }}
+      <img class="icone-botao" :src="icone" alt="icone" />
+      {{ textoBotao }}
     </div>
   </button>
 </template>
@@ -40,13 +40,13 @@ export default {
   filter: brightness(90%);
 }
 .icone-botao {
-    width: 19px;
-    height: 19px;
-    filter: invert(100%) sepia(0%) saturate(7483%) hue-rotate(96deg) brightness(111%) contrast(101%);
+  width: 19px;
+  height: 19px;
+  filter: invert(100%) sepia(0%) saturate(7483%) hue-rotate(96deg)
+    brightness(111%) contrast(101%);
 }
 .container-conteudo-botao {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
-
 </style>

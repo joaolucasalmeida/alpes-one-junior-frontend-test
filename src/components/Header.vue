@@ -113,7 +113,7 @@ export default {
     Button,
     Form,
     Card,
-    CarouselNavigations
+    CarouselNavigations,
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template>
-  <span class="dot" style="background-color: #1C69D4"></span>
-  <span class="dot" style="background-color: #E6E6E6"></span>
-  <span class="dot" style="background-color: #E6E6E6"></span>
+  <span class="dot" style="background-color: #1c69d4"></span>
+  <span class="dot" style="background-color: #e6e6e6"></span>
+  <span class="dot" style="background-color: #e6e6e6"></span>
 </template>
 <script>
 export default {

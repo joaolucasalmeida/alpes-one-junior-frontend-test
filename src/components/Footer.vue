@@ -82,9 +82,9 @@ export default {
     font-size: 10px;
   }
   .logo-bmw {
-      display: none;
+    display: none;
   }
-  .copyright-container { 
+  .copyright-container {
     margin-left: 0;
     margin-right: 0;
     flex-direction: column;
@@ -92,7 +92,7 @@ export default {
     font-size: 10px;
   }
   .logo-alpes-container {
-      padding-top: 30px;
+    padding-top: 30px;
   }
 }
 </style>
