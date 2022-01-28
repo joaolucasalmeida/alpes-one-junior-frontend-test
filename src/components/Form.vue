@@ -65,7 +65,8 @@ export default {
   }
   @media screen and (max-width: 600px) {
     .form-container {
-      display: none;
+      margin: 0;
+      width: 100%;
     }
   }
 </style>

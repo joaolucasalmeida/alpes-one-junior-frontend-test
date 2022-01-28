@@ -15,19 +15,19 @@
         />
       </div>
       <div>
-        <MenuButton textoBotao="1" />
-        <MenuButton textoBotao="2" />
-        <MenuButton textoBotao="3" />
-        <MenuButton textoBotao="4" />
-        <MenuButton textoBotao="5" />
-        <MenuButton textoBotao="6" />
-        <MenuButton textoBotao="7" />
-        <MenuButton textoBotao="8" />
-        <MenuButton textoBotao="X" />
-        <MenuButton textoBotao="Z" />
-        <MenuButton textoBotao="M" />
-        <MenuButton textoBotao="i" />
-        <MenuButton textoBotao="Plug-in-Hybrid" />
+        <MenuButton @click-menu="clickMenu" textoBotao="1" />
+        <MenuButton @click-menu="clickMenu" textoBotao="2" />
+        <MenuButton @click-menu="clickMenu" textoBotao="3" />
+        <MenuButton @click-menu="clickMenu" textoBotao="4" />
+        <MenuButton @click-menu="clickMenu" textoBotao="5" />
+        <MenuButton @click-menu="clickMenu" textoBotao="6" />
+        <MenuButton @click-menu="clickMenu" textoBotao="7" />
+        <MenuButton @click-menu="clickMenu" textoBotao="8" />
+        <MenuButton @click-menu="clickMenu" textoBotao="X" />
+        <MenuButton @click-menu="clickMenu" textoBotao="Z" />
+        <MenuButton @click-menu="clickMenu" textoBotao="M" />
+        <MenuButton @click-menu="clickMenu" textoBotao="i" />
+        <MenuButton @click-menu="clickMenu" textoBotao="Plug-in-Hybrid" />
       </div>
     </div>
     <div class="mobile-header-container">
@@ -41,8 +41,45 @@
       </div>
       <img class="logo-bmw" src="imgs/logos/logo-bmw-rio.svg" alt="logo bmw" />
     </div>
-    <div class="mobile-header-button">
-      <Button textoBotao="Solicitar Cotação" width="100%" />
+    <div v-if="showForm" class="mobile-header-button">
+      <Button
+        @click-event="clickEvent"
+        textoBotao="Minimizar"
+        width="100%"
+        color="#666666"
+      />
+    </div>
+    <div v-else class="mobile-header-button">
+      <Button
+        @click-event="clickEvent"
+        textoBotao="Solicitar Cotação"
+        width="100%"
+      />
+    </div>
+    <div v-if="showForm">
+      <Form />
+    </div>
+    <div v-if="showDropdown" class="dropdown-container">
+      <Card
+        marcaDoCarro="BMW Serie 1"
+        imagemDoCarro="imgs\veiculos\serie1.png"
+        esconderBotaoCotacao="true"
+      />
+      <Card
+        marcaDoCarro="BMW Serie 1"
+        imagemDoCarro="imgs\veiculos\serie1.png"
+        esconderBotaoCotacao="true"
+      />
+      <Card
+        marcaDoCarro="BMW Serie 1"
+        imagemDoCarro="imgs\veiculos\serie1.png"
+        esconderBotaoCotacao="true"
+      />
+      <Card
+        marcaDoCarro="BMW Serie 1"
+        imagemDoCarro="imgs\veiculos\serie1.png"
+        esconderBotaoCotacao="true"
+      />
     </div>
   </header>
 </template>
@@ -51,6 +88,8 @@
 import HeaderButton from "../components/HeaderButton.vue";
 import MenuButton from "../components/MenuButton.vue";
 import Button from "../components/Button.vue";
+import Form from "../components/Form.vue";
+import Card from "../components/Card.vue";
 
 export default {
   name: "Header",
@@ -58,6 +97,26 @@ export default {
     HeaderButton,
     MenuButton,
     Button,
+    Form,
+    Card,
+  },
+  data() {
+    return {
+      showForm: false,
+      showDropdown: false,
+    };
+  },
+  methods: {
+    //Exibe formulario apos captura do evento de click no botao solitar
+    clickEvent() {
+      this.showForm = !this.showForm;
+    },
+
+    //Exibe dropdown do menu apos click no botao do menu
+    clickMenu() {
+      console.log("aaaa");
+      this.showDropdown = !this.showDropdown;
+    },
   },
 };
 </script>
@@ -79,6 +138,18 @@ export default {
   width: 91.98px;
   height: 91.98px;
   padding-top: 30px;
+}
+.dropdown-container {
+  width: 1920px;
+  height: 383px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 151px;
+  display: flex;
+  justify-content: center;
+  border-style: outset;
+  border-width: 1px;
 }
 .mobile-header-button {
   display: none;
@@ -115,7 +186,8 @@ export default {
     width: 19px;
     height: 19px;
     margin-right: 6px;
-    filter: invert(39%) sepia(15%) saturate(16%) hue-rotate(64deg) brightness(95%) contrast(81%);
+    filter: invert(39%) sepia(15%) saturate(16%) hue-rotate(64deg)
+      brightness(95%) contrast(81%);
   }
   .mobile-header-container {
     display: flex;
@@ -123,6 +195,9 @@ export default {
     justify-content: space-between;
     margin-right: 16px;
     margin-left: 16px;
+  }
+  .dropdown-container {
+    display: none;
   }
 }
 </style>

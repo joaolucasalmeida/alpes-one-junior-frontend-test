@@ -1,7 +1,9 @@
 <template>
   <div class="home-container">
     <Header />
-    <Form />
+    <div class="hideFormOnMobile">
+      <Form />
+    </div>
     <Banner />
     <h1 class="titulo-lista-carros">ESCOLHA SEU BMW</h1>
     <div class="cards-container">
@@ -70,6 +72,9 @@ export default {
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  .hideFormOnMobile {
+    display: none;
   }
 }
 </style>

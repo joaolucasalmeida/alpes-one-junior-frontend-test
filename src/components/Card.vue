@@ -2,7 +2,9 @@
   <div class="card-container">
     <img :src="imagemDoCarro" alt="Imagem do carro">
     <div class="marcaDoCarro">{{ marcaDoCarro }}</div>
-    <Button textoBotao="Cotação"/>
+    <div v-if="!esconderBotaoCotacao">
+      <Button textoBotao="Cotação"/>
+    </div>
     <div class="compartilhe-container">
         <span class="compartilhe-texto">Compartilhe: </span> 
         <img class="compartilhe-icones" src="icons\svg\facebook.svg" alt="facebook">
@@ -20,7 +22,8 @@ export default {
   },
   props: {
     imagemDoCarro: String,
-    marcaDoCarro: String
+    marcaDoCarro: String,
+    esconderBotaoCotacao: Boolean
   },
 
 }

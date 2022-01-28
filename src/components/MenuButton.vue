@@ -1,5 +1,5 @@
 <template>
-    <button class="botao-estilo-padrao"> {{ textoBotao }} </button>
+    <button @click="$emit('click-menu')" class="botao-estilo-padrao"> {{ textoBotao }} </button>
 </template>
 
 <script>

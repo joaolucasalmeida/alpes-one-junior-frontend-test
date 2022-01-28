@@ -1,5 +1,5 @@
 <template>
-    <button class="botao-estilo-padrao" :style="{ width: width}"> {{ textoBotao }} </button>
+    <button @click="$emit('click-event')" class="botao-estilo-padrao" :style="{ width: width, backgroundColor: color}"> {{ textoBotao }} </button>
 </template>
 
 <script>
@@ -7,7 +7,8 @@ export default {
   name: 'Button',
   props: {
     textoBotao: String,
-    width: String
+    width: String,
+    color: String
   }
 }
 </script>
