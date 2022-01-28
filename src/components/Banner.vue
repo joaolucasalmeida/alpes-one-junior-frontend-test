@@ -32,10 +32,10 @@ export default {
 }
 .carousel-container {
   position: absolute;
-  bottom: 43px;
-  left: 929px;
-  min-width: 80px;
-}
+  top: 890px;
+  margin-left: 929px;
+  min-width: 80px;}
+
 @media screen and (max-width: 600px) {
   .banner-imagem {
     display: none;
