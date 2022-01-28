@@ -85,6 +85,9 @@
         imagemDoCarro="imgs\veiculos\serie1.png"
         :esconderBotaoCotacao="true"
       />
+      <div class="carousel-container">
+        <CarouselNavigations />
+      </div>
       <img
         class="dropdown-setas"
         src="icons/svg/seta-a-direita.svg"
@@ -100,6 +103,7 @@ import MenuButton from "../components/MenuButton.vue";
 import Button from "../components/Button.vue";
 import Form from "../components/Form.vue";
 import Card from "../components/Card.vue";
+import CarouselNavigations from "../components/CarouselNavigations.vue";
 
 export default {
   name: "Header",
@@ -109,6 +113,7 @@ export default {
     Button,
     Form,
     Card,
+    CarouselNavigations
   },
   data() {
     return {
@@ -175,6 +180,10 @@ export default {
 }
 .mobile-telefone-header {
   display: none;
+}
+.carousel-container {
+  position: absolute;
+  top: 340px;
 }
 @media screen and (max-width: 600px) {
   .header {

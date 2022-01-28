@@ -79,6 +79,7 @@ export default {
     }
     .imagem-do-carro:hover {
       opacity: 0.5;
+      cursor: pointer;
     }
     .margin-right {
       margin-right: 16px;
