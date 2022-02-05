@@ -1,4 +1,7 @@
 # Landing Page - Loja de Carros
+Este é um projeto exemplo do front-end de uma landing page de uma loja de veículos. Na imagem abaixo é possível visualizar o resultado final.
+
+![print](https://user-images.githubusercontent.com/65321021/152629307-5ba9c240-8cd3-4623-8bb2-bfe786313146.png)
 
 ## Configuração do projeto
 Utilizei para este projeto o framework Javascript Vue.js (Vue 3).
