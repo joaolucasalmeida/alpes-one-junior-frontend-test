@@ -1,4 +1,4 @@
-# Landing Page - Locadora de Carros
+# Landing Page - Loja de Carros
 
 ## Configuração do projeto
 Utilizei para este projeto o framework Javascript Vue.js (Vue 3).
