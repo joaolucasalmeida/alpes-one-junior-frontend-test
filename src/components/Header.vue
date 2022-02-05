@@ -4,7 +4,7 @@
       <div>
         <HeaderButton
           icone="icons/svg/telefone.svg"
-          textoBotao="(21) 2042-4442"
+          textoBotao="(51) 8123-4567"
         />
         <HeaderButton icone="icons/svg/360.svg" textoBotao="TOUR VIRTUAL" />
         <HeaderButton
