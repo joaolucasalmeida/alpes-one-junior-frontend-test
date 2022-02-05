@@ -80,11 +80,6 @@
         imagemDoCarro="imgs\veiculos\serie1.png"
         :esconderBotaoCotacao="true"
       />
-      <Card
-        marcaDoCarro="BMW Serie 1"
-        imagemDoCarro="imgs\veiculos\serie1.png"
-        :esconderBotaoCotacao="true"
-      />
       <div class="carousel-container">
         <CarouselNavigations />
       </div>
@@ -140,7 +135,7 @@ export default {
 .header {
   display: flex;
   justify-content: space-evenly;
-  width: 1920px;
+  min-width: 1280px;
   height: 145px;
 }
 .header-conteudo-container {
@@ -154,12 +149,13 @@ export default {
   padding-top: 30px;
 }
 .dropdown-container {
-  width: 1920px;
+  width: 100%;
+  min-width: 1280px;
   height: 383px;
   background-color: white;
   position: absolute;
   z-index: 1;
-  top: 151px;
+  top: 149px;
   display: flex;
   justify-content: center;
   border-style: outset;
@@ -188,6 +184,7 @@ export default {
 @media screen and (max-width: 600px) {
   .header {
     width: 100%;
+    min-width: 0;
     height: 105px;
     justify-content: center;
     flex-direction: column;

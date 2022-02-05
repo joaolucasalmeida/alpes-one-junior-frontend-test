@@ -1,22 +1,18 @@
 <template>
   <footer class="footer">
-    <p class="footer-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a elementum
-      orci, vitae commodo nibh. In vitae convallis nisl. Morbi rhoncus mattis
-      purus sed commodo. Integer rhoncus ex risus. Proin efficitur elit nunc, ut
-      pulvinar massa egestas in. Fusce quis quam viverra, pretium quam ac,
-      consectetur lectus.
-    </p>
+    <div class="footer-text-container">
+      <p class="footer-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a elementum
+        orci, vitae commodo nibh. In vitae convallis nisl. Morbi rhoncus mattis
+        purus sed commodo. Integer rhoncus ex risus. Proin efficitur elit nunc, ut
+        pulvinar massa egestas in. Fusce quis quam viverra, pretium quam ac,
+        consectetur lectus.
+      </p>
+    </div>
     <div class="copyright-container">
       <img class="logo-bmw" src="imgs/logos/logo-bmw-rio.svg" alt="logo bmw" />
       <span>© Copyright © 2021 Lorem ipsum dolor sit amet.</span>
       <div class="logo-alpes-container">
-        <span>Feito por:</span>
-        <img
-          class="logo-alpes"
-          src="imgs/logos/logo-alpes.png"
-          alt="logo alpes"
-        />
       </div>
     </div>
   </footer>
@@ -31,18 +27,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .footer {
-  width: 1920px;
   height: 251px;
+  min-width: 1280px;
   background-color: #e6e6e6;
+}
+.footer-text-container {
+  display: flex;
+  justify-content: center;
 }
 .footer-text {
   font-family: BMWTypeNext-Light;
   font-size: 14px;
-  width: 1350px;
   text-align: center;
-  margin-left: 285px;
   padding-top: 40px;
   padding-bottom: 40px;
+  width: 1082px;
 }
 .copyright-container {
   display: flex;
@@ -72,6 +71,7 @@ export default {
 @media screen and (max-width: 600px) {
   .footer {
     width: 100%;
+    min-width: 0;
     height: 266px;
   }
   .footer-text {
@@ -79,6 +79,8 @@ export default {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 46px;
+    padding-right: 15px;
+    padding-left: 15px;
     font-size: 10px;
   }
   .logo-bmw {

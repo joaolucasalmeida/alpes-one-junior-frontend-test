@@ -5,31 +5,35 @@
       <Form />
     </div>
     <Banner />
-    <h1 class="titulo-lista-carros">ESCOLHA SEU BMW</h1>
-    <div class="cards-container">
-      <Card
-        marcaDoCarro="BMW Serie 1"
-        imagemDoCarro="imgs\veiculos\serie1.png"
-      />
-      <Card
-        marcaDoCarro="BMW M3 Competition"
-        imagemDoCarro="imgs\veiculos\m3.png"
-      />
-      <Card marcaDoCarro="BMW M5" imagemDoCarro="imgs\veiculos\m5.png" />
-      <Card marcaDoCarro="BMW X2" imagemDoCarro="imgs\veiculos\x2.png" />
-      <Card
-        marcaDoCarro="BMW Serie 4"
-        imagemDoCarro="imgs\veiculos\serie-4.png"
-      />
-      <Card
-        marcaDoCarro="BMW Serie 3"
-        imagemDoCarro="imgs\veiculos\serie-3.png"
-      />
-      <Card marcaDoCarro="BMW Z4" imagemDoCarro="imgs\veiculos\z4.png" />
-      <Card
-        marcaDoCarro="BMW Serie 2"
-        imagemDoCarro="imgs\veiculos\serie2.png"
-      />
+    <div class="titulo-lista-carros-container">
+      <h1 class="titulo-lista-carros">ESCOLHA SEU BMW</h1>
+    </div>
+    <div class="center-cards-container">
+      <div class="cards-container">
+        <Card
+          marcaDoCarro="BMW Serie 1"
+          imagemDoCarro="imgs\veiculos\serie1.png"
+        />
+        <Card
+          marcaDoCarro="BMW M3 Competition"
+          imagemDoCarro="imgs\veiculos\m3.png"
+        />
+        <Card marcaDoCarro="BMW M5" imagemDoCarro="imgs\veiculos\m5.png" />
+        <Card marcaDoCarro="BMW X2" imagemDoCarro="imgs\veiculos\x2.png" />
+        <Card
+          marcaDoCarro="BMW Serie 4"
+          imagemDoCarro="imgs\veiculos\serie-4.png"
+        />
+        <Card
+          marcaDoCarro="BMW Serie 3"
+          imagemDoCarro="imgs\veiculos\serie-3.png"
+        />
+        <Card marcaDoCarro="BMW Z4" imagemDoCarro="imgs\veiculos\z4.png" />
+        <Card
+          marcaDoCarro="BMW Serie 2"
+          imagemDoCarro="imgs\veiculos\serie2.png"
+        />
+      </div>
     </div>
     <Footer />
     <button class="whatsapp-button">
@@ -61,20 +65,32 @@ export default {
 .home-container {
   min-width: 380px;
 }
+.titulo-lista-carros-container {
+  display: flex;
+  justify-content: center;
+  min-width: 1280px;
+}
 .titulo-lista-carros {
   font-family: BMWTypeNext-Light;
   font-size: 40px;
   font-weight: 100;
   margin-top: 80px;
   margin-bottom: 61px;
-  margin-left: 788px;
   width: 397px;
 }
+
 .cards-container {
   display: flex;
+  justify-content: center;
   flex-flow: row wrap;
-  width: 1400px;
-  margin-left: 285px;
+  min-width: 1280px;
+  max-width: 1720px;
+}
+
+.center-cards-container {
+  display: flex;
+  justify-content: center;
+  min-width: 1280px;
 }
 
 .whatsapp-button {
@@ -85,8 +101,15 @@ export default {
 @media screen and (max-width: 600px) {
   .cards-container {
     width: 100%;
+    min-width: 0;
     margin-left: 0;
     justify-content: center;
+  }
+  .center-cards-container { 
+    min-width: 0;
+  }
+  .titulo-lista-carros-container {
+    min-width: 0;
   }
   .titulo-lista-carros {
     margin-left: 0;

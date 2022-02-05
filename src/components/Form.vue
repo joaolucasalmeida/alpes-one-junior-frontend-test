@@ -36,8 +36,8 @@ export default {
 <style scoped lang="scss">
 .form-container {
   position: absolute;
-  margin-left: 1370px;
-  margin-top: 30px;
+  margin-left: calc(100% - 408px);
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -63,6 +63,13 @@ export default {
 .titulo-form-container {
   display: flex;
 }
+@media screen and (max-width: 1470px) {
+  .form-container {
+    margin-left: 985px;
+    margin-top: 22px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .form-container {
     margin: 0;
